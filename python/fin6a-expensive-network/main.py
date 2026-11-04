@@ -1,13 +1,11 @@
-# 67011014
+# -- OPERATING PRINCIPLE --
+# A spanning tree (in this case, a maximum spanning tree) is found using Kruskal's algorithm.
 
-# -- ПРИНЦИП РАБОТЫ --
-# Остовное дерево (макс. в данном случае) находится при помощи алгоритма Краскала
+# -- TIME COMPLEXITY --
+# O(E log E), where E is the number of edges in the graph.
 
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# O(ElogE), где E — количество рёбер в графе
-
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# Потребуется O(E+V) дополнительной памяти, где E — количество рёбер в графе, а V - количесто вершин
+# -- SPACE COMPLEXITY --
+# Requires O(E + V) additional memory, where E is the number of edges in the graph and V is the number of vertices.
 
 
 class Graph:

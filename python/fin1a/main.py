@@ -1,5 +1,3 @@
-# 55650599
-
 def minimize(items):
     left = populate(items)
     right = populate(items[::-1])

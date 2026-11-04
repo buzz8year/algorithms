@@ -1,13 +1,11 @@
-# 67472331
+# -- OPERATING PRINCIPLE --
+# The shortest Levenshtein distance is determined using the Wagner-Fischer algorithm.
 
-# -- ПРИНЦИП РАБОТЫ --
-# Кратчайшее расстояние Левенштейна находится с помощью алгоритма Вагнера-Фишера
+# -- TIME COMPLEXITY --
+# Requires O(m*n) time, where (m, n) are the lengths of the two strings being compared.
 
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# Потребуется O(m*n) времени, где (m,n) — длины двух строк подлежащих сравнению
-
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# Потребуется O(m*n) дополнительной памяти, где (m,n) — длины двух строк подлежащих сравнению
+# -- SPACE COMPLEXITY --
+# Requires O(m*n) additional memory, where (m, n) are the lengths of the two strings being compared.
 
 
 def find_distance(a, b):

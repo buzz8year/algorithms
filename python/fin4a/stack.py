@@ -28,9 +28,9 @@ class TaskManager:
 
 
 s = TaskManager()
-s.new_stack("помыть посуду", 4)
-s.new_stack("постирать белье", 4)
-s.new_stack("побухать с мужиками", 1)
-s.new_stack("сдать лабу по питошке", 2)
-s.new_stack("покормить кота", 2)
+s.new_stack("dish washing", 4)
+s.new_stack("cloth washing", 4)
+s.new_stack("pub crawling", 1)
+s.new_stack("submit python tasks", 2)
+s.new_stack("feed cat", 2)
 print(s)

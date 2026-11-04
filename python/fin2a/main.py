@@ -1,29 +1,25 @@
-# 59150824
+# -- OPERATING PRINCIPLE --
+# A double-ended queue (deque) data structure implemented using a fixed-size array.
+# Elements added to the queue are placed at either the head or the tail of the array, depending on the chosen method.
+# Elements removed from the queue are likewise taken from either the head or the tail of the array, depending on the chosen method.
+# The head of the queue moves from right to left when an element is added to the head.
+# The head of the queue moves from left to right when an element is removed from the head.
+# The tail of the queue moves from left to right when an element is added to the tail.
+# The tail of the queue moves from right to left when an element is removed from the tail.
+# The head and tail indices are incremented modulo the array size, creating a circular (wraparound) queue structure.
+
+# -- PROOF OF CORRECTNESS --
+# The algorithm's description implies that the later an element is added to the queue,
+# the sooner it will be removed from it, which satisfies the problem's requirements.
 
 
-# -- ПРИНЦИП РАБОТЫ --
-# Структура данных дек на ограниченном массиве.
-# Все добавляемые в очередь элементы добавляются в голову или в хвост массива в зависимости выбранного метода.
-# Все извлекаемые из очереди элементы извлекаются также из головы или из хвоста массива в зависимости выбранного метода.
-# Голова очереди движется справа-налево вместе с добавленным в голову элементом.
-# Голова очереди движется слева-направо вслед за извлеченным из головы элементом.
-# Хвост очереди движется слева-направо вместе с добавленным в хвост элементом.
-# Хвост очереди движется справа-налево вслед за извлеченным из хвоста элементом.
-# Голова и хвост инкрементируются по модулю, чтобы движение очереди было зацикленным.
-
-# -- ДОКАЗАТЕЛЬСТВО КОРРЕКТНОСТИ --
-# Из описания алгоритма следует, что чем позже элемент добавился в очередь,
-# тем раньше он будет из неё извлечён, что и требуется по условию задачи.
+# -- TIME COMPLEXITY --
+# Adding an element to the queue takes O(1) time.
+# Removing an element from the queue takes O(1) time in the best case.
 
 
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# Добавление в очередь стоит O(1).
-# Извлечение из очереди стоит в лучшем случае O(1).
-
-
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# Массив, содержащий k элементов, занимает O(k) памяти.
-
+# -- SPACE COMPLEXITY --
+# An array containing k elements occupies O(k) memory.
 
 class Deque:
     def __init__(self, n):

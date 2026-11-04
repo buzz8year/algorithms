@@ -18,7 +18,6 @@ class Solution(object):
             self.addTwoNumbers(l1.next, l2.next)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     n1 = ListNode(3)
     n2 = ListNode(4, n1)
@@ -30,5 +29,3 @@ if __name__ == '__main__':
 
     sol = Solution()
     sol.addTwoNumbers(n3, k3)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

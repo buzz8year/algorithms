@@ -1,16 +1,14 @@
-# 67562918
+# -- OPERATING PRINCIPLE --
+# Unpack the strings. Determine the length of the shortest one. Compare the strings character by character from left to right,
+# incrementing an index. Upon encountering the first difference, terminate the loop and record the index.
+# The common prefix is ​​the substring extending from the beginning to that index.
 
-# -- ПРИНЦИП РАБОТЫ --
-# Распаковываем строки. Находим длину самой короткой из них. Посимвольно сравниваем строки слева направо,
-# инкрементируя индекс. Наткнувшись на первое различие прерываем цикл и запоминаем индекс.
-# Общим префиксом будет подстрока от левого начала до значения индекса.
+# -- TIME COMPLEXITY --
+# O(n^2 * L) time, where n is the number of strings and L is the length of the longest unpacked string.
 
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# O(n^2 * L) времени, где n — количество строк, а L - длина самой длинной из распакованны строк.
-
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# В худшем случае потребуется O(n*L) дополнительной памяти, где n — количество строк,
-# а L - длина самой длинной из распакованны строк.
+# -- SPACE COMPLEXITY --
+# In the worst case, O(n * L) additional memory is required, where n is the number of strings
+# and L is the length of the longest unpacked string.
 
 
 def unpack(row):

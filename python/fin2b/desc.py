@@ -1,46 +1,42 @@
-# -- ПРИНЦИП РАБОТЫ --
-# Я реализовал очередь на 1м стеке.
-# Все добавляемые в очередь элементы добавляются во входной стек.
-# Все извлекаемые из очереди элементы извлекаются из выходного стека.
+# -- OPERATING PRINCIPLE --
+# I have implemented a queue using two stacks.
+# All elements added to the queue are placed into an input stack.
+# All elements removed from the queue are taken from an output stack.
 #
-# Если на момент извлечения из очереди выходной стек пуст,
-# то последовательно перекладываю все элементы из входного стека в выходной,
-# соответственно они перекладываются в обратном порядке.
+# If the output stack is empty when an element is to be removed,
+# all elements are moved from the input stack to the output stack,
+# which effectively reverses their order.
 #
-# Я вдохновился идеей решения из статьи https://habr.com/ru/post/483944/
+# -- PROOF OF CORRECTNESS --
+# The algorithm ensures that the earlier an element is added to the queue,
+# the earlier it will be removed.
 #
-# -- ДОКАЗАТЕЛЬСТВО КОРРЕКТНОСТИ --
-# Из описания алгоритма следует, что чем раньше элемент добавился в очередь,
-# тем раньше он будет из неё извлечён.
+# The output stack stores elements in the reverse order of their arrival
+# into the input stack.
 #
-# Выходной стек хранит элементы в порядке, обратном тому,
-# в каком они пришли во входной.
+# A stack follows the LIFO (Last-In, First-Out) principle, while a queue follows FIFO (First-In, First-Out).
+# A stack inverts the order of elements—the first become the last.
+# Since two stacks are used, the order is inverted twice,
+# ultimately restoring the elements to their original order.
 #
-# Стек -- это порядок LIFO, а очередь -- это FIFO.
-# Стек инвертирует порядок элементов: первые становятся последними.
-# Так как у нас используются два стека, порядок меняется дважды,
-# в итоге мы возвращаем элементы в исходном порядке.
+# -- TIME COMPLEXITY --
+# Adding an element to the queue takes O(1) time, as pushing onto the input stack is an O(1) operation.
 #
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# Добавление в очередь стоит O(1), потому что добавление во входной стек стоит O(1).
+# Removing an element from the queue takes O(1) time in the best case—when the output stack is not empty.
 #
-# Извлечение из очереди стоит в лучшем случае O(1), когда выходной стек не пуст.
+# In the worst case, removal takes O(n) time, occurring when the output stack is empty
+# and all elements must be transferred from the input stack to the output stack.
 #
-# В худшем случае извлечение стоит O(n), когда выходной стек пуст,
-# и тогда требуется переложить все элементы из входного стека в выходной.
+# Considering the average complexity of removing an element from the queue:
+# Each element is moved from one stack to the other exactly once. # This means that adding and removing a total of n elements will cost O(n).
+# On average, we get O(n) / n ~ O(1) — the amortized complexity.
 #
-# Оценим сложность извлечения из очереди в среднем:
-# Каждый элемент будет переложен из стека в стек ровно один раз.
-# Это значит, что добавление и извлечение n элементов в сумме будет стоить O(n).
-# В среднем получаем O(n) / n ~ O(1) -- амортизированная сложность.
+# -- SPACE COMPLEXITY --
+# If the queue contains n elements, then the input stack contains n1 elements,
+# and the output stack contains n2 elements, where n1 + n2 = n.
 #
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# Если очередь содержит n элементов, то входной стек содержит n1 элементов,
-# и выходной стек содержит n2 элементов, причём n1 + n2 = n
-#
-# Стек, содержащий k элементов, занимает O(k) памяти.
-# Поэтому и моя очередь будет потреблять O(n1) + O(n2) = O(n) памяти.
-
+# A stack containing k elements occupies O(k) memory.
+# Therefore, my queue will consume O(n1) + O(n2) = O(n) memory.
 
 class Stack:
     def __init__(self, n):

@@ -1,13 +1,11 @@
-# 67455576
+# -- OPERATING PRINCIPLE --
+# Cycle detection is performed using an iterative implementation of the DFS (Depth-First Search) algorithm.
 
-# -- ПРИНЦИП РАБОТЫ --
-# Поиск цикла осуществляется при помощи алгоритма DFS на итеративной реализации
+# -- TIME COMPLEXITY --
+# O(E + V), where E is the number of edges in the graph and V is the number of vertices (assuming each vertex is visited once).
 
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# O(E+V), где E — количество рёбер в графе, а V - количесто вершин (при условии, что вершины посещаются 1раз)
-
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# Потребуется O(V) дополнительной памяти, где V - количесто вершин (при условии, что вершины посещаются 1раз)
+# -- SPACE COMPLEXITY --
+# Requires O(V) additional memory, where V is the number of vertices (assuming each vertex is visited once).
 
 
 class Stack:

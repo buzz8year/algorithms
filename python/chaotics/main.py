@@ -20,5 +20,4 @@ def read_func():
 
     print(chaotics)
 
-
 read_func()

@@ -1,19 +1,11 @@
-# 64684565
-
-# -- ПРИНЦИП РАБОТЫ --
-# Сортировка осуществляется методом быстрой сортировки Хоара.
+# -- OPERATING PRINCIPLE --
+# Sorting is performed using Hoare's quicksort algorithm.
 #
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# Временная сложность алгоритма O(n*log(n)), т.к. опорный элемент делит массив пополам.
+# -- TIME COMPLEXITY --
+# The time complexity of the algorithm is O(n*log(n)), as the pivot element divides the array in half.
 #
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# Массив содержащий k элементов, занимает O(k) памяти.
-
-
-# -- ВОПРОСЫ --
-# Убрал sorted() и поправил while/for
-# А вот насчет единного компаратора почему-то не могу понять.
-# Кажется, как я делаю, с рекурсией, по трем признакам одним методом не отсортировать.
+# -- SPACE COMPLEXITY --
+# An array containing k elements occupies O(k) memory.
 
 
 def sort_name(items):

@@ -1,24 +1,21 @@
-# 59067982
-
-# -- ПРИНЦИП РАБОТЫ --
-# Реализация с помощью структуры данных "стек".
-# Все добавляемые в очередь элементы добавляются в голову стека.
-# Все извлекаемые из очереди элементы извлекаются также из головы стека.
-# Голова стека движется слева-направо вместе с крайним добавляемым элементом.
+# -- OPERATING PRINCIPLE --
+# Implemented using a "stack" data structure.
+# All elements added to the queue are placed onto the top of the stack.
+# All elements removed from the queue are likewise taken from the top of the stack.
+# The top of the stack moves from left to right, following the most recently added element.
 #
-# -- ДОКАЗАТЕЛЬСТВО КОРРЕКТНОСТИ --
-# Из описания алгоритма следует, что чем позже элемент добавился в очередь,
-# тем раньше он будет из неё извлечён, что и требуется по условию задачи.
+# -- PROOF OF CORRECTNESS --
+# The algorithm's design ensures that the later an element is added to the queue,
+# the sooner it is removed—which satisfies the problem's requirements.
 #
-# -- ВРЕМЕННАЯ СЛОЖНОСТЬ --
-# Добавление в очередь стоит O(1).
-# Извлечение из очереди стоит в лучшем случае O(1).
-# Временаая сложность алгоритма O(1)
+# -- TIME COMPLEXITY --
+# Adding an element to the queue takes O(1) time.
+# Removing an element from the queue takes O(1) time in the best case.
+# The overall time complexity of the algorithm is O(1).
 #
-# -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
-# Стек, содержащий k элементов, занимает O(k) памяти.
-# Поэтому и моя очередь будет потреблять O(n) памяти.
-
+# -- SPACE COMPLEXITY --
+# A stack containing k elements occupies O(k) memory.
+# Therefore, this queue implementation consumes O(n) memory.
 
 class Stack:
     def __init__(self, n):
