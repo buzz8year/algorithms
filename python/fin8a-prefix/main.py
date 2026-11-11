@@ -38,7 +38,7 @@
 # -- SOLUTION OPERATING PRINCIPLE --
 # Unpack the strings. Determine the length of the shortest one. Compare the strings character by character from left to right,
 # incrementing an index. Upon encountering the first difference, terminate the loop and record the index.
-# The common prefix is ​​the substring extending from the beginning to that index.
+# The common prefix is the substring extending from the beginning to that index.
 
 # -- SOLUTION TIME COMPLEXITY --
 # O(n^2 * L) time, where n is the number of strings and L is the length of the longest unpacked string.
@@ -57,7 +57,8 @@ def unpack(row):
         left = row.rfind('[', 0, rght)
         n = int(row[left-1])
 
-        row = row[:left-1] + row[left+1:rght] * n + row[rght+1:]
+        parts = [row[:left - 1], row[left + 1:rght] * n, row[rght + 1:]]
+        row = ''.join(parts)
 
 
 def longest_prefix(rows):
