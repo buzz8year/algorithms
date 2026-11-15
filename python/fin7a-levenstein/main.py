@@ -1,10 +1,36 @@
-# -- OPERATING PRINCIPLE --
+# -- PROBLEM STATEMENT --
+# The Levenshtein distance between two strings, s and t, is the number of atomic operations
+# required to transform one string into the other. Atomic operations are defined as follows:
+# deleting a character, inserting a character, or substituting one character for another.
+# Find the Levenshtein distance for the given pair of strings.
+# Output a single number — the distance between the strings.
+
+# -- INPUT FORMAT --
+# The first line contains a string s, and the second line contains a string t.
+# The lengths of both strings do not exceed 1000.
+# The strings consist of lowercase Latin letters.
+
+# -- Example 1 --
+# INPUT:
+# abacaba
+# abaabc
+# OUTPUT:
+# 2
+
+# -- Example 2 --
+# INPUT:
+# innokentiy
+# innnokkentia
+# OUTPUT:
+# 3
+
+# -- SOLUTION OPERATING PRINCIPLE --
 # The shortest Levenshtein distance is determined using the Wagner-Fischer algorithm.
 
-# -- TIME COMPLEXITY --
+# -- SOLUTION TIME COMPLEXITY --
 # Requires O(m*n) time, where (m, n) are the lengths of the two strings being compared.
 
-# -- SPACE COMPLEXITY --
+# -- SOLUTION SPACE COMPLEXITY --
 # Requires O(m*n) additional memory, where (m, n) are the lengths of the two strings being compared.
 
 
