@@ -1,10 +1,47 @@
-# -- OPERATING PRINCIPLE --
+# -- PROBLEM STATEMENT --
+# John decided to connect all the computers in his company into a single network.
+# To do this, he came up with the idea of building a minimum spanning tree to use resources more efficiently.
+# However, he received news from his superiors that the budget allocated for the network turned out to be very large and needed to be spent urgently.
+# Therefore, John is now interested not in minimum spanning trees, but in maximum spanning trees.
+# He tasked you with finding the weight of such a maximum spanning tree in an undirected graph that defines the office layout.
+
+# -- INPUT FORMAT --
+# The first line contains the number of vertices n and edges m in the graph (1≤n≤1000, 0≤m≤100000).
+# Each of the following m lines contains edges in the form of triples of numbers u, v, w.
+# u and v are the vertices that this edge connects. w is its weight (1≤u, v≤n, 0≤w≤10000).
+# The graph may contain loops and multiple edges.
+# The graph may be disconnected.
+
+# -- OUTPUT FORMAT --
+# If a maximum spanning tree exists, output its weight.
+# Otherwise (if the graph has several connected components), output the phrase “Oops! I did it again”.
+
+# -- Example 1 --
+# INPUT:
+# 4 4
+# 1 2 5
+# 1 3 6
+# 2 4 8
+# 3 4 3
+# OUTPUT:
+# 19
+
+# -- Example 2 --
+# INPUT:
+# 3 3
+# 1 2 1
+# 1 2 2
+# 2 3 1
+# OUTPUT:
+# 3
+
+# -- SOLUTION OPERATING PRINCIPLE --
 # A spanning tree (in this case, a maximum spanning tree) is found using Kruskal's algorithm.
 
-# -- TIME COMPLEXITY --
+# -- SOLUTION TIME COMPLEXITY --
 # O(E log E), where E is the number of edges in the graph.
 
-# -- SPACE COMPLEXITY --
+# -- SOLUTION SPACE COMPLEXITY --
 # Requires O(E + V) additional memory, where E is the number of edges in the graph and V is the number of vertices.
 
 
