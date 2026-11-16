@@ -1,4 +1,4 @@
-from trial import remove
+from main import remove
 
 
 class Node:
